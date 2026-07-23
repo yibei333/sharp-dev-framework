@@ -1,15 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net10.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Authors>yibei333</Authors>
-		<Description>SharpDevFramework web模板</Description>
-		<Copyright>yibei333</Copyright>
-		<RepositoryUrl>https://github.com/yibei333/sharp-dev-framework</RepositoryUrl>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>1.0.10</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
@@ -25,18 +19,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.8" />
-		<PackageReference Include="SharpDevFramework" Version="1.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10"/>
+		<PackageReference Include="SharpDevFramework" Version="1.0.11" />
 	</ItemGroup>
-
-	<!--<ItemGroup>
-	  <ProjectReference Include="..\SharpDevFramework\SharpDevFramework.csproj" />
-	</ItemGroup>-->
 
 	<ItemGroup>
 	  <None Update="install.bat">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
+		<None Update="publish.bat">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 
 </Project>

@@ -46,7 +46,7 @@ public class DemosController(AppDbContext context, TaskCenter taskCenter) : Cont
         context.Demos.Add(demo);
         context.SaveChanges();
         var payload = HttpContext.GetJwtPayload();
-        if (logger.IsEnabled(LogLevel.Information)) logger.LogInformation("special token:'{Token}'", tokenService.GenerateSpecialToken(payload.UserId,payload.Username,payload.Role));
+        if (logger.IsEnabled(LogLevel.Information)) logger.LogInformation("special token:'{Token}'", tokenService.GenerateSpecialToken(payload.UserId, payload.Username, payload.Role));
         return EmptyReply.Succeed();
     }
 

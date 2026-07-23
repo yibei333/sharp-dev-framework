@@ -65,7 +65,7 @@ public class TokenService(IConfiguration configuration) : ISingletonService
             UserId = userId,
             Username = username,
             Role = role,
-            Type="api",
+            Type = "api",
             Exp = DateTimeOffset.UtcNow.AddMinutes(expire).ToUnixTimeSeconds(),
         };
         return JwtHelper.CreateWithHmacSha256(payload, secret);

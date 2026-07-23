@@ -4,6 +4,12 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<Authors>yibei333</Authors>
+		<Description>SharpDevFramework web模板</Description>
+		<Copyright>yibei333</Copyright>
+		<RepositoryUrl>https://github.com/yibei333/sharp-dev-framework</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.0.11</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">

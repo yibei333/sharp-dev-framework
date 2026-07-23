@@ -1,4 +1,5 @@
 using Mapster;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SharpDevLib;
 using System.Reflection;
@@ -20,6 +21,7 @@ public class EnumsController : ControllerBase
     /// </summary>
     /// <returns>枚举响应列表</returns>
     [HttpGet]
+    [AllowAnonymous]
     public DataReply<List<EnumsResponse>> Get()
     {
         if (_cache is null)

@@ -23,8 +23,8 @@ internal static class SeedData
 
         if (!context.Users.Any())
         {
-            var userName = RandomHelper.GenerateCode(RandomType.LetterLower, 6);
-            var password = RandomHelper.GenerateCode(RandomType.Mix, 12);
+            var userName = "root";
+            var password = "12345678";
             var passwordHasher = new PasswordHasher<UserEntity>();
             var user = new UserEntity
             {
@@ -34,7 +34,6 @@ internal static class SeedData
             user.PasswordHash = passwordHasher.HashPassword(user, password);
             context.Users.Add(user);
             context.SaveChanges();
-            File.WriteAllText(SharpFrameworkStatics.InitAuthPath, $"{userName}\r\n{password}");
         }
     }
 }

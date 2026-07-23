@@ -53,9 +53,4 @@ public static class SharpFrameworkStatics
     /// JWT 密钥文件路径
     /// </summary>
     public static readonly string JwtSecretPath = DatabaseDirectory.CombinePath("jwt-secret.txt");
-
-    /// <summary>
-    /// 初始化认证信息文件路径
-    /// </summary>
-    public static readonly string InitAuthPath = DatabaseDirectory.CombinePath("auth.txt");
 }

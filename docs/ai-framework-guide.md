@@ -353,10 +353,8 @@ dotnet ef migrations add InitialCreate --output-dir Data/Migrations
 |----------|-----|------|
 | `SharpFrameworkStatics.DatabasePath` | `{root}/data/db/database.db` | SQLite 数据库文件 |
 | `SharpFrameworkStatics.JwtSecretPath` | `{root}/data/db/jwt-secret.txt` | JWT 签名密钥 |
-| `SharpFrameworkStatics.InitAuthPath` | `{root}/data/db/auth.txt` | 初始管理员凭据 |
 
-首次运行时自动创建数据库和目录。首次启动自动创建随机管理员账号，凭据写入 `auth.txt`。
-
+初始用户名/密码为root/12345678
 ---
 
 ## 4. 认证与授权
@@ -972,7 +970,6 @@ public static class SharpFrameworkStatics
     public static readonly string DatabasePath = DatabaseDirectory.CombinePath("database.db");
     public static readonly string LogsPath = LogsDirectory.CombinePath("logs-.txt");
     public static readonly string JwtSecretPath = DatabaseDirectory.CombinePath("jwt-secret.txt");
-    public static readonly string InitAuthPath = DatabaseDirectory.CombinePath("auth.txt");
 }
 ```
 

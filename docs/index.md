@@ -813,6 +813,7 @@ await api.demos.create(name, type);
 ### Windows 服务部署
 
 项目包含 `install.bat` 脚本，支持一键安装为 Windows 服务：
+项目包含 `uninstall.bat` 脚本，支持一键卸载 Windows 服务：
 
 ``bash
 # 1. 发布项目
@@ -839,7 +840,7 @@ dotnet publish -c Release
 
 ### 修改服务名
 
-编辑 `install.bat` 中的变量：
+编辑 `install.bat`和`uninstall.bat` 中的变量：
 
 ``batch
 set APP_NAME=YourApp.Exe
